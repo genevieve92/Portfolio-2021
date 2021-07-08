@@ -16,19 +16,40 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-
+        
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="/index.js"></script>
 </head>
 
 <body>
     <div>
-        <nav>
+        <nav class="myLinks">
             <a href="#" class="navItem logo"> <img src="images/GenevievePoblanoLogo@1x.png"
                     alt="Genevieve Poblano"></a>
-            <a href="#" class="navItem">ABOUT</a>
-            <a href="#" class="navItem">DIGITAL DESIGN</a>
-            <a href="#" class="navItem">ART DIRECTION</a>
-            <a href="#" class="navItem">MOTION DESIGN</a>
-            <a href="#" class="navItem">CONTACT</a>
+                    <div id="tabContainer">
+                        
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    
+                      </div>
+            <a href="#" class="navItem tab sectionLink">ABOUT</a>
+            <a href="#" class="navItem tab sectionLink">DIGITAL DESIGN</a>
+            <a href="#" class="navItem tab sectionLink">ART DIRECTION</a>
+            <a href="#" class="navItem tab sectionLink">MOTION DESIGN</a>
+            <a href="#" class="navItem tab sectionLink">CONTACT</a>
+        </nav>
+<!-- mobile nav -->
+        <nav class="myLinks mobile-container" id="mobileMenu" >
+            <a href="#" class="navItem logo"> <img src="images/GenevievePoblanoLogo@1x.png"
+                    alt="Genevieve Poblano"></a>
+                    
+            <a href="#" class="navItem tab mobileNav">ABOUT</a>
+            <a href="#" class="navItem tab mobileNav">DIGITAL DESIGN</a>
+            <a href="#" class="navItem tab mobileNav">ART DIRECTION</a>
+            <a href="#" class="navItem tab mobileNav">MOTION DESIGN</a>
+            <a href="#" class="navItem tab mobileNav">CONTACT</a>
         </nav>
     </div>
     <div class="container">
@@ -40,6 +61,7 @@
                         <h1>Welcome friend! My name is Genevieve, let’s make things.</h1>
                         <h3>Portland, Oregon based Visual Digital Designer.</h3>
                         <button>Contact Me</button>
+                        <h3><br><a href="#bottomModule"  class="smallLink">Check our my work below =)<i class="fas fa-chevron-down"></i></a></h3>
                     </div>
                     <div class="heroRight">
                         <img src="images/profilePic.png">
@@ -67,7 +89,7 @@
                     <h4>See more</h4>
                 </div>
             </div>
-            <div class="bottomModule">
+            <div id="bottomModule" class="bottomModule">
                 <div class="hero">
                     <div class="heroLeft">
                         <h1>Nomad Travel App</h1>
@@ -105,6 +127,7 @@
                         <button>
                             SEE PROJECT
                         </button>
+                        
                     </div>
                     <div class="heroRight">
                         <img src="images/egcImg.png">
@@ -155,5 +178,6 @@
 
 
 </body>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/index.js"></script>
 </html>

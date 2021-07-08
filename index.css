@@ -1,4 +1,8 @@
-  nav{
+html {
+    scroll-behavior: smooth;
+  }
+
+nav{
     display: flex;
     border: 1px solid white;
     width: 100%;
@@ -6,17 +10,45 @@
     align-items: center;
     flex-direction: center;
     justify-content: center;
+    text-decoration: none;
+    list-style: none;
   
 }
 
 
+.mobile-container{
+    display: none;
+}
+
+.smallLink{
+    color: white;
+    margin: 0px;
+    list-style: none;
+   
+    font-size: 16px;
+    font-weight: 500;
+    transition: .5s;
+    font-family: 'Montserrat', sans-serif;
+
+    text-decoration: none;
+    list-style: none;
+}
+
+.smallLink:hover{
+    transform: scale(1.25);
+    color: rgb(255, 71, 224);
+}
 
 body{
     background-image: url("images/background@2x.png");
-    background-color: #111;
+    /* background-color: #111; */
     font-family: 'Open Sans', sans-serif;
     margin: 0px;
     font-family: 'Montserrat', sans-serif;
+
+
+    background-color: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(180deg, #181818 0%, #181818 3.65%, rgba(209, 208, 208, 0) 57.29%), url(.png), linear-gradient(180deg, #2B85D8 0%, rgba(245, 164, 214, 0.63) 52.6%, rgba(24, 52, 198, 0.42) 100%), linear-gradient(180deg, #4D0ACE 0%, rgba(255, 255, 255, 0) 100%), #181818;
+    background-blend-mode: soft-light, color-burn, normal, normal, normal, normal;
 }
 
 /* .grid{
@@ -42,7 +74,12 @@ body{
     font-weight: 500;
     transition: .5s;
     font-family: 'Montserrat', sans-serif;
+
+    text-decoration: none;
+    list-style: none;
 }
+
+
 
 .socialItem{
     padding: 0px 50px 50px;
@@ -68,10 +105,15 @@ body{
     font-size: 16px;
     font-weight: 600;
     transition: .5s;
+
+    text-decoration: none;
+    list-style: none;
 }
 
 .navItem:hover{
-    transform: scale(1.25);    
+    transform: scale(1.25);
+    text-decoration-line: underline;
+    text-decoration-thickness: 6px;
 }
 
 .footerNavItem:hover{
@@ -109,6 +151,7 @@ h1{
     color: white;
 
 }
+
 
 button{
     border: 2px solid white;
@@ -399,6 +442,8 @@ footer{
     align-items: flex-start;
 }
 
+
+
 @media only screen and (max-width: 600px) {
     
     .body {
@@ -412,6 +457,95 @@ footer{
         column-gap: 20px;
         
       }
+
+      /* menu nav hamburger bar  */
+      .mobile-container {
+        max-width: 480px;
+        /* margin: auto; */
+        /* background-color: #555; */
+        height: 100%;
+        color: white;
+        border-radius: 10px;
+        /* padding-right: 100px; */
+      }
+
+      .mobileNav{
+          padding: 15px 0px;
+          
+      }
+
+      #mobileMenu{
+          display: none;
+      }
+
+      .myLinks{
+          align-items: flex-start;
+          justify-content: flex-start;
+      }
+      
+      .topnav {
+        overflow: hidden;
+        background-color: #333;
+        position: relative;
+      }
+      
+      .topnav #myLinks {
+        display: none;
+      }
+      
+      .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+      }
+      
+      .topnav a.icon {
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      
+      .active {
+        /* background-color: #04AA6D; */
+        color: white;
+      }
+
+      #tabContainer {
+        margin-right: 0px;
+        cursor: pointer;
+      }
+      
+      .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+      
+      .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+      }
+      
+      .change .bar2 {opacity: 0;}
+      
+      .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
+
+
+/* */
   
       nav{
           display: flex;
@@ -419,13 +553,12 @@ footer{
           justify-content: center;
           padding: 20px;
       }
-  
-      .navItem {
-          display: flex;
-          padding: 10px;
-          flex-direction: column;
-          
+
+      .sectionLink{
+          display: none;
       }
+  
+    
 
       .mainContent{
           display: flex;
@@ -436,6 +569,10 @@ footer{
             margin-left: 0px;
 
          
+      }
+
+      .logo{
+          display: none;
       }
 
       .mainModule, .hero{
